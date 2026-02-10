@@ -1,4 +1,3 @@
-
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -61,3 +60,4 @@ mongoose.connect(MONGO_URI)
     console.error('Full error:', err);
     process.exit(1);
   });
+
