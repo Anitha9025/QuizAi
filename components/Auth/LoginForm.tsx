@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { useAuth } from '../../context/AuthContext.tsx';
-import { UserRole } from '../../types.ts';
+import { useAuth } from '../../context/AuthContext';
+import { UserRole } from '../../types';
 import { Mail, Lock, Loader2, GraduationCap, Briefcase, Eye, EyeOff } from 'lucide-react';
 
 const LoginForm: React.FC = () => {

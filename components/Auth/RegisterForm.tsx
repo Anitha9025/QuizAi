@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext.tsx';
-import { UserRole } from '../../types.ts';
+import { UserRole } from '../../types';
 import { User, Mail, Lock, GraduationCap, Briefcase, Loader2, Eye, EyeOff } from 'lucide-react';
 
 const RegisterForm: React.FC = () => {

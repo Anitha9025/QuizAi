@@ -1,11 +1,11 @@
 
 import React from 'react';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext.tsx';
-import Navigation from './components/Layout/Navigation.tsx';
-import LoginForm from './components/Auth/LoginForm.tsx';
-import RegisterForm from './components/Auth/RegisterForm.tsx';
-import HomePage from './pages/HomePage.tsx';
+import { AuthProvider } from './context/AuthContext';
+import Navigation from './components/Layout/Navigation';
+import LoginForm from './components/Auth/LoginForm';
+import RegisterForm from './components/Auth/RegisterForm';
+import HomePage from './pages/HomePage';
 
 const App: React.FC = () => {
   return (

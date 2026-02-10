@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { useAuth } from '../context/AuthContext.tsx';
-import { UserRole } from '../types.ts';
+import { useAuth } from '../context/AuthContext';
+import { UserRole } from '../types';
 import { PlusCircle, PlayCircle, Trophy, BarChart3, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
