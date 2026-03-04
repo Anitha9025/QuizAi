@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { User, UserRole, AuthState } from '../types';
+import { UserRole, AuthState } from '../types';
 import api from '../api/axios';
 
 interface AuthContextType extends AuthState {
@@ -23,7 +23,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     try {
       const response = await api.post('/auth/login', { email, password });
       const { token, user } = response.data;
-      
+
       if (user.role !== role) {
         throw new Error(`This account is registered as a ${user.role}. Please use the ${user.role} portal.`);
       }

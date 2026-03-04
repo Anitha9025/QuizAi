@@ -16,18 +16,18 @@ const HomePage: React.FC = () => {
           <span className="text-indigo-600">AI-Powered Quizzes</span>
         </h1>
         <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
-          Create, take, and analyze quizzes with adaptive difficulty and real-time insights. 
+          Create, take, and analyze quizzes with adaptive difficulty and real-time insights.
           The smarter way to learn and teach.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Link 
-            to="/register" 
+          <Link
+            to="/register"
             className="bg-indigo-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-200"
           >
             Start for Free
           </Link>
-          <Link 
-            to="/login" 
+          <Link
+            to="/login"
             className="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-xl text-lg font-bold hover:bg-slate-50 transition-all"
           >
             View Demo
@@ -46,8 +46,8 @@ const HomePage: React.FC = () => {
           Hello, {user.name}! 👋
         </h1>
         <p className="text-slate-500">
-          {isInstructor 
-            ? "Manage your quizzes and track student performance." 
+          {isInstructor
+            ? "Manage your quizzes and track student performance."
             : "Continue your learning path and challenge yourself."}
         </p>
       </header>
@@ -55,22 +55,22 @@ const HomePage: React.FC = () => {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {isInstructor ? (
           <>
-            <DashboardCard 
-              title="Create New Quiz" 
+            <DashboardCard
+              title="Create New Quiz"
               description="Use AI to generate questions or create them manually."
               icon={<PlusCircle className="text-indigo-600" />}
-              link="/create"
+              link="/create-quiz"
               color="indigo"
             />
-            <DashboardCard 
-              title="My Quizzes" 
+            <DashboardCard
+              title="My Quizzes"
               description="Manage your existing assessments and view results."
               icon={<BarChart3 className="text-purple-600" />}
               link="/quizzes"
               color="purple"
             />
-            <DashboardCard 
-              title="Leaderboards" 
+            <DashboardCard
+              title="Leaderboards"
               description="View top performers across all your subjects."
               icon={<Trophy className="text-amber-600" />}
               link="/leaderboards"
@@ -79,22 +79,22 @@ const HomePage: React.FC = () => {
           </>
         ) : (
           <>
-            <DashboardCard 
-              title="Take a Quiz" 
+            <DashboardCard
+              title="Take a Quiz"
               description="Browse available quizzes and start learning."
               icon={<PlayCircle className="text-emerald-600" />}
               link="/browse"
               color="emerald"
             />
-            <DashboardCard 
-              title="My Progress" 
+            <DashboardCard
+              title="My Progress"
               description="See how you've improved over time."
               icon={<BarChart3 className="text-blue-600" />}
               link="/progress"
               color="blue"
             />
-            <DashboardCard 
-              title="Global Ranking" 
+            <DashboardCard
+              title="Global Ranking"
               description="See where you stand among all students."
               icon={<Trophy className="text-amber-600" />}
               link="/rankings"
@@ -107,15 +107,15 @@ const HomePage: React.FC = () => {
   );
 };
 
-const DashboardCard: React.FC<{ 
-  title: string; 
-  description: string; 
-  icon: React.ReactNode; 
+const DashboardCard: React.FC<{
+  title: string;
+  description: string;
+  icon: React.ReactNode;
   link: string;
   color: string;
 }> = ({ title, description, icon, link, color }) => {
   return (
-    <Link 
+    <Link
       to={link}
       className="group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all"
     >

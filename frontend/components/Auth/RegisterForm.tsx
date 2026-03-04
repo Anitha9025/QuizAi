@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { useAuth } from '../../context/AuthContext.tsx';
+import { useAuth } from '../../context/AuthContext';
 import { UserRole } from '../../types';
 import { User, Mail, Lock, GraduationCap, Briefcase, Loader2, Eye, EyeOff } from 'lucide-react';
 
@@ -18,7 +18,7 @@ const RegisterForm: React.FC = () => {
     try {
       await register(name, email, password, role);
       navigate('/');
-    } catch (err) {}
+    } catch (err) { }
   };
 
   return (
@@ -95,11 +95,10 @@ const RegisterForm: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setRole(UserRole.STUDENT)}
-                className={`flex items-center justify-center gap-2 p-3 rounded-xl border transition-all ${
-                  role === UserRole.STUDENT
+                className={`flex items-center justify-center gap-2 p-3 rounded-xl border transition-all ${role === UserRole.STUDENT
                     ? 'border-indigo-600 bg-indigo-50 text-indigo-700 font-bold'
                     : 'border-slate-200 bg-white text-slate-500'
-                }`}
+                  }`}
               >
                 <GraduationCap className="w-5 h-5" />
                 Student
@@ -107,11 +106,10 @@ const RegisterForm: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setRole(UserRole.INSTRUCTOR)}
-                className={`flex items-center justify-center gap-2 p-3 rounded-xl border transition-all ${
-                  role === UserRole.INSTRUCTOR
+                className={`flex items-center justify-center gap-2 p-3 rounded-xl border transition-all ${role === UserRole.INSTRUCTOR
                     ? 'border-indigo-600 bg-indigo-50 text-indigo-700 font-bold'
                     : 'border-slate-200 bg-white text-slate-500'
-                }`}
+                  }`}
               >
                 <Briefcase className="w-5 h-5" />
                 Instructor

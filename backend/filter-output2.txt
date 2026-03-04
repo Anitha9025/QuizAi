@@ -1,0 +1,4 @@
+﻿[dotenv@17.2.4] injecting env (4) from .env -- tip: ΓÜÖ∩╕Å  write to custom object with { processEnv: myObject }
+Connected to DB
+Quizzes for Inst1: Inst1 Quiz
+Quizzes for Inst2: Inst2 Quiz

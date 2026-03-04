@@ -5,6 +5,11 @@ import Navigation from './components/Layout/Navigation';
 import LoginForm from './components/Auth/LoginForm';
 import RegisterForm from './components/Auth/RegisterForm';
 import HomePage from './pages/HomePage';
+import Dashboard from './pages/Dashboard';
+import CreateQuiz from './pages/CreateQuiz';
+import EditQuiz from './pages/EditQuiz';
+import TakeQuiz from './pages/TakeQuiz';
+import QuizResults from './pages/QuizResults';
 
 const App: React.FC = () => {
   return (
@@ -17,6 +22,11 @@ const App: React.FC = () => {
               <Route path="/" element={<HomePage />} />
               <Route path="/login" element={<LoginForm />} />
               <Route path="/register" element={<RegisterForm />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/create-quiz" element={<CreateQuiz />} />
+              <Route path="/edit-quiz/:id" element={<EditQuiz />} />
+              <Route path="/take-quiz/:id" element={<TakeQuiz />} />
+              <Route path="/quiz-results/:id" element={<QuizResults />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>

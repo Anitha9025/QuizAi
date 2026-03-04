@@ -1,0 +1,4 @@
+﻿api/quizzes.ts(2,1): error TS6133: 'Quiz' is declared but its value is never read.
+components/Auth/RegisterForm.tsx(3,25): error TS5097: An import path can only end with a '.tsx' extension when 'allowImportingTsExtensions' is enabled.
+components/Layout/Navigation.tsx(3,25): error TS5097: An import path can only end with a '.tsx' extension when 'allowImportingTsExtensions' is enabled.
+context/AuthContext.tsx(2,10): error TS6133: 'User' is declared but its value is never read.

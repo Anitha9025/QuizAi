@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const authRoutes = require('./routes/auth');
+const quizRoutes = require('./routes/quizzes');
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.get('/api/health', (req, res) => {
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/quizzes', quizRoutes);
 
 // 404 handler
 app.use((req, res) => {
